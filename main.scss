@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+    $color-primary: #9356DC;
+    $color-secondary: #FF79DA;
+    $color-tertiary: #99E2D0;
+    $background-color: #d9d9d9;
+    $light-background-color: #F6F6F6;
+
+    $breakpoints-tablet: 768px;
+    $breakpoints-desktop: 1025px;
+
+
+@mixin position {
+    display:flex;
+    justify-content: center;
+}
+@mixin background-hover {
+
+}
+
+
+h1{
+    font-size: 20px;
+        @media (min-width:$breakpoints-tablet){
+            font-size: 24px;
+        }
+        @media (min-width:$breakpoints-desktop){
+            font-size: 28px;
+        }
+    }
+
+h2{
+    font-size: 18px;
+        @media (min-width:$breakpoints-tablet){
+            font-size: 22px;
+        }
+        @media (min-width:$breakpoints-desktop){
+            font-size: 24px;
+        }
+    }
+
+p{
+    font-size: 15px;
+    @media (min-width:$breakpoints-tablet){
+        font-size: 17px;
+    }
+    @media (min-width:$breakpoints-desktop){
+        font-size: 19px;
+    }
+}
+
+header{
+    @include position;
+        padding: 19px 0 5px 0;
+        background-color: $light-background-color;
+        box-shadow: 0 0 5px 0;
+        img{
+            width: 150px;
+            @media (min-width:$breakpoints-tablet){
+                width: 200px;
+            }
+            @media (min-width:$breakpoints-desktop){
+                width: 250px;
+            }
+        } 
+}
+
+.location{
+    @include position;
+    padding: 15px 0;
+    i{ padding-right: 15px;
+    }
+}
+
+.showcase{
+    background-color: $light-background-color;
+}
+
