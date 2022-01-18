@@ -17,11 +17,10 @@ html, body {
     $color-secondary: #FF79DA;
     $color-tertiary: #99E2D0;
     $background-color: #eeebeb;
+    $dark-background-color: hsl(0, 1%, 64%);
     $light-background-color: #F6F6F6;
-
     $font-family: 'Roboto', sans-serif;
     $font-color:black;
-
     $breakpoints-tablet: 768px;
     $breakpoints-desktop: 1025px;
 
@@ -32,12 +31,16 @@ html, body {
 }
 
 h1{
-    font-size: 20px;
+    font-size: 23px ;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    padding: 2rem 3.5rem 0 3.5rem;
         @media (min-width:$breakpoints-tablet){
-            font-size: 24px;
+            font-size: 26px;
         }
         @media (min-width:$breakpoints-desktop){
-            font-size: 28px;
+            font-size: 30px;
         }
     }
 
@@ -52,19 +55,21 @@ h2{
     }
 
 p{
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: lighter;
+    text-align: center;
         @media (min-width:$breakpoints-tablet){
-            font-size: 17px;
+            font-size: 19px;
         }
         @media (min-width:$breakpoints-desktop){
-            font-size: 19px;
+            font-size: 22px;
         }
 }
 
 .logo img{
     @include center;
     padding-top: 20px;
-        width: 130px; 
+        width: 150px; 
         margin: auto;
         @media (min-width:$breakpoints-desktop){
             width: 200px;
@@ -90,7 +95,22 @@ input{
 }
 
 .showcase{
-    background-color: $light-background-color;
+    background-color: $light-background-color; 
+   padding-bottom: 35px;
+}
+.explore-btn{
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 200px;
+    border-style: none;
+    box-shadow: 0 5px 5px $background-color;
+    background: linear-gradient(340deg, $color-primary, $color-secondary);
+    font: 16px;
+    color:#ffffff;
+    height:50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 img{
