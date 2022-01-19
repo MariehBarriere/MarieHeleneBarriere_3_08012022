@@ -27,7 +27,14 @@ html, body {
 @mixin center{
     display:flex;
     justify-content: center;
-    align-items: center;
+}
+
+@mixin bkg_hover($color-primary){
+    background-color: lighten($color-primary, 35%);
+}
+
+@mixin shadow{
+    box-shadow: 0 5px 5px $background-color; 
 }
 
 h1{
@@ -45,12 +52,12 @@ h1{
     }
 
 h2{
-    font-size: 18px;
+    font-size: 21px;
         @media (min-width:$breakpoints-tablet){
             font-size: 22px;
         }
         @media (min-width:$breakpoints-desktop){
-            font-size: 24px;
+            font-size: 26px;
         }
     }
 
@@ -72,7 +79,7 @@ p{
         width: 150px; 
         margin: auto;
         @media (min-width:$breakpoints-desktop){
-            width: 200px;
+        width: 200px;
         }
 }
 
@@ -96,29 +103,69 @@ input{
 
 .showcase{
     background-color: $light-background-color; 
-   padding-bottom: 35px;
+    padding-bottom: 35px;
 }
 .explore-btn{
     display:flex;
     justify-content: center;
+    color:#ffffff;
+    height:50px;
+    margin-left: 60px;
+    margin-right: 60px;
     cursor: pointer;
     border-radius: 200px;
     border-style: none;
-    box-shadow: 0 5px 5px $background-color;
+    @include shadow;
     background: linear-gradient(340deg, $color-primary, $color-secondary);
-    font: 16px;
-    color:#ffffff;
-    height:50px;
-    margin-left: 50px;
-    margin-right: 50px;
 }
 
-img{
-    width: 200px;
+.how_to{
+    @include center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+li{
+    padding: 25px 0 25px 26px;
+    margin: 0 0 25px 10px;
+    background-color: $light-background-color;
+    font: black;
+    @include shadow; 
+    &:hover{
+        @include bkg_hover($color-primary);
+    }
+    &:hover i{
+        color:$color-primary;
+    }
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+}  
+span{
+    padding: 2px 5px;
+    margin-left: -35px;
+    position: absolute;
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: #F6F6F6;
+}
+i{
+    margin-right: 20px;
+    color:hsl(0, 1%, 64%)
+}
+
+
+
+.restaurants img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
     @media (min-width:$breakpoints-tablet){
-        width: 250px;
+        height: 250px;
     }
     @media (min-width:$breakpoints-desktop){
-        width: 300px;
+        height: 300px;
     }
-} 
+}
