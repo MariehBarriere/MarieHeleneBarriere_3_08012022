@@ -108,7 +108,7 @@ input{
 .explore-btn{
     display:flex;
     justify-content: center;
-    color:#ffffff;
+    color:#fff;
     height:50px;
     margin-left: 60px;
     margin-right: 60px;
@@ -125,11 +125,11 @@ input{
     padding: 30px;
 }
 
-li{
-    padding: 25px 0 25px 26px;
+.how_to li{
+    padding: 25px 0 25px 25px;
     margin: 0 0 25px 10px;
     background-color: $light-background-color;
-    font: black;
+    font: color #000;
     @include shadow; 
     &:hover{
         @include bkg_hover($color-primary);
@@ -138,12 +138,8 @@ li{
         color:$color-primary;
     }
     border-radius: 22px;
-    -webkit-border-radius: 22px;
-    -moz-border-radius: 22px;
-    -ms-border-radius: 22px;
-    -o-border-radius: 22px;
 }  
-span{
+.how_to span{
     padding: 2px 5px;
     margin-left: -35px;
     position: absolute;
