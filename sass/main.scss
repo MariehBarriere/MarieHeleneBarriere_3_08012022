@@ -38,6 +38,18 @@ html, body {
 }
 
 h1{
+    @include center;
+    font-family: Shrikhand;
+    font-size: 26px;
+        @media (min-width:$breakpoints-tablet){
+            font-size: 28px;
+        }
+        @media (min-width:$breakpoints-desktop){
+            font-size: 32px;
+        }
+}
+
+h2{
     font-size: 23px ;
     font-weight: bold;
     text-align: center;
@@ -51,7 +63,7 @@ h1{
         }
     }
 
-h2{
+h3{
     font-size: 21px;
         @media (min-width:$breakpoints-tablet){
             font-size: 22px;
@@ -165,3 +177,4 @@ i{
         height: 300px;
     }
 }
+
