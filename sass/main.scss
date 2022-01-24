@@ -79,6 +79,7 @@ h3{
 h4{
     font-size: 19px;
     font-weight: bolder;
+    margin:0;
         @media (min-width:$breakpoints-tablet){
             font-size: 21px;
         }
@@ -89,7 +90,7 @@ h4{
     
 
 p{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: lighter;
     text-align: center;
         @media (min-width:$breakpoints-tablet){
@@ -194,13 +195,35 @@ i{
 .restaurant_card{
     background-color: #fff;
     margin: 20px 0;
+    position: relative;
     overflow: hidden;
     @include shadow;
-    border-radius: 15px;;
+    transition: .4s;
+    border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.text_card{
+    padding: 10px;
+}
+
+.text-card p{
+    margin-left:0;
+}
+
+.restaurants span{
+    background-color: $color-tertiary;
+    color: #0c755b;
+    border: none;
+    margin: 12px 12px 0 0;
+    position: absolute;
 }
 
 .restaurants img{
