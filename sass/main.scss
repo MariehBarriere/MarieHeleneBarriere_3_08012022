@@ -92,7 +92,6 @@ h4{
 p{
     font-size: 16px;
     font-weight: lighter;
-    text-align: center;
         @media (min-width:$breakpoints-tablet){
             font-size: 19px;
         }
@@ -132,6 +131,10 @@ input{
 .showcase{
     background-color: $light-background-color; 
     padding-bottom: 40px;
+}
+
+.showcase p{
+    text-align: center;
 }
 .explore-btn{
     display:flex;
@@ -212,10 +215,6 @@ i{
 
 .text_card{
     padding: 10px;
-}
-
-.text-card p{
-    margin-left:0;
 }
 
 .restaurants span{
