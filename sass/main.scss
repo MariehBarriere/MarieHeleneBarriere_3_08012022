@@ -24,6 +24,7 @@ html, body {
     $breakpoints-tablet: 768px;
     $breakpoints-desktop: 1025px;
 
+    
 @mixin center{
     display:flex;
     justify-content: center;
@@ -35,6 +36,31 @@ html, body {
 
 @mixin shadow{
     box-shadow: 0 5px 5px $background-color; 
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.loading::after{
+    content:"";
+    width: 50px;
+    height: 50px;
+    border: 10px solid $background-color;
+    border-top-color: $color-primary;
+    border-bottom-color: $color-secondary;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+    -webkit-animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    to{
+        transform: rotate (2turn);
+    }
 }
 
 h1{
@@ -50,7 +76,7 @@ h1{
 }
 
 h2{
-    font-size: 23px ;
+    font-size: 24px ;
     font-weight: bold;
     text-align: center;
     margin-top: 0;
@@ -121,9 +147,9 @@ input{
     display:flex;
     justify-content: center;
     color:#fff;
-    height:50px;
-    margin-left: 60px;
-    margin-right: 60px;
+    padding: 20px 0 20px 0;
+    margin-left: 55px;
+    margin-right: 55px;
     cursor: pointer;
     border-radius: 200px;
     border-style: none;
@@ -135,6 +161,11 @@ input{
     @include center;
     flex-direction: column;
     padding: 30px;
+}
+
+.how_to ul{
+    padding: 0;
+    margin-top: 0;
 }
 
 .how_to li{
@@ -160,7 +191,7 @@ input{
     color: #F6F6F6;
 }
 i{
-    margin-right: 20px;
+    margin-right: 25px;
     color:hsl(0, 1%, 64%)
 }
 
