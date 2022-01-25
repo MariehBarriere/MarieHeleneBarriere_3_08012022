@@ -3,7 +3,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif, #000;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
     flex-wrap: wrap;
 }
 
@@ -219,8 +220,10 @@ i{
     background-color: $color-tertiary;
     color: #0c755b;
     border: none;
-    margin: 12px 12px 0 0;
     position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 5px;
 }
 
 .restaurants img{
