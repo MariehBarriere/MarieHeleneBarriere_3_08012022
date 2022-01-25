@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif, #000;
     flex-wrap: wrap;
 }
 
@@ -140,8 +140,7 @@ input{
     justify-content: center;
     color:#fff;
     padding: 20px 0 20px 0;
-    margin-left: 55px;
-    margin-right: 55px;
+    margin: 25px 55px 0 55px;
     cursor: pointer;
     border-radius: 200px;
     border-style: none;
@@ -184,7 +183,7 @@ input{
 }
 i{
     margin-right: 25px;
-    color:hsl(0, 1%, 64%)
+    color:hsl(0, 1%, 50%)
 }
 
 #restaurants{
@@ -225,7 +224,7 @@ i{
 }
 
 .restaurants img{
-    height: 200px;
+    height: 160px;
     width: 100%;
     object-fit: cover;
     @media (min-width:$breakpoints-tablet){
