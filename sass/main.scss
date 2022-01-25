@@ -175,14 +175,14 @@ input{
     border-radius: 22px;
 }  
 .how_to span{
-    padding: 2px 5px;
+    padding: 2px 6px;
     margin-left: -35px;
     position: absolute;
     background-color: $color-primary;
     border-radius: 50%;
     color: #F6F6F6;
 }
-i{
+.how_to i{
     margin-right: 25px;
     color:hsl(0, 1%, 50%)
 }
@@ -223,7 +223,7 @@ i{
     position: absolute;
     top: 12px;
     right: 12px;
-    padding: 5px;
+    padding: 4px;
 }
 
 .restaurants img{
@@ -236,6 +236,42 @@ i{
     @media (min-width:$breakpoints-desktop){
         height: 300px;
     }
+
+.btn_like{
+    position: absolute;
+    margin-left: -20px;
+    font-size: 20px;
+}
+.btn_like:hover{
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btn_like .fas{
+    color: transparent;
+    transform: scale(0);
+    transition: transform .4s;
+    background: linear-gradient($color-primary, $color-secondary);
+    z-index: 1;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+}
+.btn_like .far{
+    opacity: 1;
+    transform: scale(0);
+    background: linear-gradient($color-primary, $color-secondary);
+    z-index: 2;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
 }
 
 
