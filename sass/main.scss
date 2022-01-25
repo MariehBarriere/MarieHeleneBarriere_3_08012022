@@ -100,16 +100,6 @@ p{
         }
 }
 
-.logo img{
-    @include center;
-    padding-top: 20px;
-        width: 150px; 
-        margin: auto;
-        @media (min-width:$breakpoints-desktop){
-        width: 200px;
-        }
-}
-
 .location form {
     @include center;
         margin-top: 10px;
