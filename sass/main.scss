@@ -64,7 +64,7 @@ h2{
         @media (min-width:$breakpoints-desktop){
             font-size: 30px;
         }
-    }
+}
 
 h3{
     font-size: 21px;
@@ -75,7 +75,7 @@ h3{
         @media (min-width:$breakpoints-desktop){
             font-size: 26px;
         }
-    }
+}
 
 h4{
     font-size: 19px;
@@ -87,7 +87,7 @@ h4{
         @media (min-width:$breakpoints-desktop){
             font-size: 24px;
         }
-    }    
+}    
 
 p{
     font-weight: lighter;
@@ -126,6 +126,7 @@ input{
 .showcase p{
     text-align: center;
 }
+
 .explore-btn{
     display:flex;
     justify-content: center;
@@ -164,6 +165,7 @@ input{
     }
     border-radius: 22px;
 }  
+
 .how_to span{
     padding: 2px 6px;
     margin-left: -35px;
@@ -172,6 +174,7 @@ input{
     border-radius: 50%;
     color: #F6F6F6;
 }
+
 .how_to i{
     margin-right: 25px;
     color:hsl(0, 1%, 50%)
@@ -184,6 +187,7 @@ input{
 .restaurants_list{
     padding: 20px;
 }
+
 .restaurant_card{
     background-color: #fff;
     margin: 20px 0;
@@ -226,9 +230,11 @@ input{
     @media (min-width:$breakpoints-desktop){
         height: 300px;
     }
+}
 
 .btn_like{
     position: absolute;
+    
     margin-left: -20px;
     font-size: 20px;
 }
@@ -266,18 +272,18 @@ input{
 footer{
     background-color: #000;
     padding: 30px 5%; 
-    font: #FFF;
 }
 
 footer h4{
     font-family: "Shrikhand";
+    color: #FFF;
 }
 
 footer .i{
     margin-right: 25px;
+    color: #FFF;
 }
-
+footer .a{
+    margin-right: 25px;
+    color: #FFF;
 }
-
-
-
