@@ -237,6 +237,7 @@ input {
   padding: 4px;
 }
 
+
 .restaurants img {
   height: 160px;
   width: 100%;
@@ -251,6 +252,9 @@ input {
 
 .btn_like {
   font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 12px;
 }
 .btn_like:hover .fas {
   transform: scale(1);
