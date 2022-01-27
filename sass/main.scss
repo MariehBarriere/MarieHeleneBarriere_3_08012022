@@ -13,278 +13,287 @@
 //import style
 @import "./layout/footer";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #000;
-    flex-wrap: wrap;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  flex-wrap: wrap;
 }
 
 * {
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-    $color-primary: #9356DC;
-    $color-secondary: #FF79DA;
-    $color-tertiary: #99E2D0;
-    $background-color: #eeebeb;
-    $dark-background-color: hsl(0, 1%, 64%);
-    $light-background-color: #F6F6F6;
-    $font-family: 'Roboto', sans-serif;
-    $font-color:black;
-    $breakpoints-tablet: 768px;
-    $breakpoints-desktop: 1025px;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$background-color: hsl(0, 1%, 91%);
+$dark-background-color: hsl(0, 1%, 75%);
+$light-background-color: #f6f6f6;
+$font-family: "Roboto", sans-serif;
+$font-color: black;
+$breakpoints-tablet: 768px;
+$breakpoints-desktop: 1025px;
 
-    
-@mixin center{
-    display:flex;
-    justify-content: center;
+@mixin center {
+  display: flex;
+  justify-content: center;
 }
 
-@mixin bkg_hover($color-primary){
-    background-color: lighten($color-primary, 35%);
+@mixin bkg_hover($color-primary) {
+  background-color: lighten($color-primary, 35%);
 }
 
-@mixin shadow{
-    box-shadow: 0 5px 5px $background-color; 
+@mixin shadow {
+  box-shadow: 0 5px 5px $background-color;
 }
 
+h1 {
+  @include center;
+  font-family: Shrikhand;
+  font-size: 26px;
+  color: $font-color;
+  @media (min-width: $breakpoints-tablet) {
+    font-size: 28px;
+  }
+  @media (min-width: $breakpoints-desktop) {
+    font-size: 32px;
+  }
+}
 
-h1{
-    @include center;
-    font-family: Shrikhand;
+h2 {
+  font-size: 24px;
+  color: $font-color;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 0;
+  padding: 2rem 3.5rem 0 3.5rem;
+  @media (min-width: $breakpoints-tablet) {
     font-size: 26px;
-        @media (min-width:$breakpoints-tablet){
-            font-size: 28px;
-        }
-        @media (min-width:$breakpoints-desktop){
-            font-size: 32px;
-        }
+  }
+  @media (min-width: $breakpoints-desktop) {
+    font-size: 30px;
+  }
 }
 
-h2{
-    font-size: 24px ;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 0;
-    padding: 2rem 3.5rem 0 3.5rem;
-        @media (min-width:$breakpoints-tablet){
-            font-size: 26px;
-        }
-        @media (min-width:$breakpoints-desktop){
-            font-size: 30px;
-        }
+h3 {
+  font-size: 21px;
+  color: $font-color;
+  font-weight: bolder;
+  @media (min-width: $breakpoints-tablet) {
+    font-size: 22px;
+  }
+  @media (min-width: $breakpoints-desktop) {
+    font-size: 26px;
+  }
 }
 
-h3{
+h4 {
+  font-size: 17px;
+  font-weight: bolder;
+  margin: 0;
+  @media (min-width: $breakpoints-tablet) {
     font-size: 21px;
-    font-weight: bolder;
-        @media (min-width:$breakpoints-tablet){
-            font-size: 22px;
-        }
-        @media (min-width:$breakpoints-desktop){
-            font-size: 26px;
-        }
+  }
+  @media (min-width: $breakpoints-desktop) {
+    font-size: 24px;
+  }
 }
 
-h4{
+p {
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0;
+  @media (min-width: $breakpoints-tablet) {
     font-size: 19px;
-    font-weight: bolder;
-    margin:0;
-        @media (min-width:$breakpoints-tablet){
-            font-size: 21px;
-        }
-        @media (min-width:$breakpoints-desktop){
-            font-size: 24px;
-        }
-}    
-
-p{
-    font-weight: lighter;
-    margin: 0;
-        @media (min-width:$breakpoints-tablet){
-            font-size: 19px;
-        }
-        @media (min-width:$breakpoints-desktop){
-            font-size: 22px;
-        }
+  }
+  @media (min-width: $breakpoints-desktop) {
+    font-size: 22px;
+  }
 }
 
 .location form {
-    @include center;
-        margin-top: 10px;
-        padding: 10px 0;
-        background-color: $background-color;
-        box-shadow: inset 0 2px 0 lightgray;  
-        i {
-            padding: 0 15px 0;
-        }
+  @include center;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: $background-color;
+  box-shadow: inset 0 2px 0 lightgray;
+  i {
+    padding: 0 15px 0;
+  }
 }
 
-input{
-    font: $font-color;
-    font-size: 15px;
-    border-color: transparent;
-    background-color: $background-color;
+input {
+  font: $font-color;
+  font-size: 15px;
+  border-color: transparent;
+  background-color: $background-color;
 }
 
-.showcase{
-    background-color: $light-background-color; 
-    padding-bottom: 40px;
+.showcase {
+  background-color: $light-background-color;
+  padding-bottom: 40px;
 }
 
-.showcase p{
-    text-align: center;
+.showcase p {
+  text-align: center;
 }
 
-.explore-btn{
-    display:flex;
-    justify-content: center;
-    color:#fff;
-    padding: 20px 0 20px 0;
-    margin: 25px 55px 0 55px;
-    cursor: pointer;
-    border-radius: 200px;
-    border-style: none;
-    @include shadow;
-    background: linear-gradient(340deg, $color-primary, $color-secondary);
+.explore-btn {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 20px 0 20px 0;
+  margin: 25px 55px 0 55px;
+  cursor: pointer;
+  border-radius: 200px;
+  border-style: none;
+  @include shadow;
+  background: linear-gradient(340deg, $color-primary, $color-secondary);
 }
 
-.how_to{
-    @include center;
-    flex-direction: column;
-    padding: 20px;
+.explore-btn:hover {
+  box-shadow: 9px 10px 9px $dark-background-color;
+  background: linear-gradient(340deg, hsl(267deg, 66%, 75%), $color-secondary);
 }
 
-.how_to ul{
-    padding: 0;
-    margin-top: 0;
+.how_to {
+  @include center;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.how_to li{
-    padding: 25px 0 25px 25px;
-    margin: 0 0 25px 10px;
-    background-color: $light-background-color;
-    font: color #000;
-    @include shadow; 
-    &:hover{
-        @include bkg_hover($color-primary);
-    }
-    &:hover i{
-        color:$color-primary;
-    }
-    border-radius: 22px;
-}  
-
-.how_to span{
-    padding: 2px 6px;
-    margin-left: -35px;
-    position: absolute;
-    background-color: $color-primary;
-    border-radius: 50%;
-    color: #F6F6F6;
+.how_to ul {
+  padding: 0;
+  margin-top: 0;
 }
 
-.how_to i{
-    margin-right: 25px;
-    color:hsl(0, 1%, 50%)
+.how_to li {
+  padding: 25px 0 25px 25px;
+  margin: 0 0 25px 10px;
+  background-color: $light-background-color;
+  font: color #000;
+  @include shadow;
+  &:hover {
+    box-shadow: 9px 10px 9px $dark-background-color;
+    @include bkg_hover($color-primary);
+  }
+ 
+  &:hover i {
+    color: $color-primary;
+  }
+  border-radius: 22px;
 }
 
-#restaurants{
-    background-color: $light-background-color;
+.how_to span {
+  padding: 2px 6px;
+  margin-left: -35px;
+  position: absolute;
+  background-color: $color-primary;
+  border-radius: 50%;
+  color: #f6f6f6;
 }
 
-.restaurants_list{
-    padding: 20px;
+.how_to i {
+  margin-right: 25px;
+  color: hsl(0, 1%, 50%);
 }
 
-.restaurant_card{
-    background-color: #fff;
-    margin: 20px 0;
-    position: relative;
-    overflow: hidden;
-    @include shadow;
-    transition: .4s;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
+#restaurants {
+  background-color: $light-background-color;
 }
 
-.text_card{
-    padding: 10px;
+.restaurants_list {
+  padding: 20px;
 }
 
-.restaurants span{
-    background-color: $color-tertiary;
-    color: #0c755b;
-    border: none;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 4px;
+.restaurant_card {
+  background-color: #fff;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  @include shadow;
+  transition: 0.4s;
+  border-radius: 15px;
 }
 
-.restaurants img{
-    height: 160px;
-    width: 100%;
-    object-fit: cover;
-    @media (min-width:$breakpoints-tablet){
-        height: 250px;
-    }
-    @media (min-width:$breakpoints-desktop){
-        height: 300px;
-    }
+.text_card {
+  padding: 10px;
 }
 
-.btn_like{
-    font-size: 20px;
-}
-.btn_like:hover .fas{
-    transform: scale(1);
-    transition: transform .4s;
-}
-
-.btn_like .fas{
-    position: absolute;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(0deg, $color-primary,
-    $color-secondary);
-    transform: scale(0);
-    transition: transform .4s;
-    z-index: 2;
-}
-.btn_like .far{
-    opacity: 1;
+.restaurants span {
+  background-color: $color-tertiary;
+  color: #0c755b;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px;
 }
 
-footer{
-    background-color: #000;
-    padding: 30px 5%; 
+.restaurants img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  @media (min-width: $breakpoints-tablet) {
+    height: 250px;
+  }
+  @media (min-width: $breakpoints-desktop) {
+    height: 300px;
+  }
 }
 
-footer h4{
-    font-family: "Shrikhand";
-    color: #FFF;
+.btn_like {
+  font-size: 20px;
+}
+.btn_like:hover .fas {
+  transform: scale(1);
+  transition: transform 0.4s;
 }
 
-footer i{
-    margin-right: 25px;
-    color: #FFF;
+.btn_like .fas {
+  position: absolute;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+  transform: scale(0);
+  transition: transform 0.4s;
+  z-index: 2;
 }
-footer a{
-    margin-right: 25px;
-    color: #FFF;
+.btn_like .far {
+  opacity: 1;
+}
+
+footer {
+  background-color: #000;
+  padding: 30px 8%;
+}
+
+footer h4 {
+  font-family: "Shrikhand";
+  color: #fff;
+}
+
+footer ul {
+  padding-left: 0;
+}
+footer li {
+  padding: 2px 0;
+}
+
+footer i {
+  margin-right: 15px;
+  font-size: 9px;
+  color: #fff;
+}
+footer a {
+  font-size: 14px;
+  color: #fff;
 }
