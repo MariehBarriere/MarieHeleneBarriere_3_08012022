@@ -373,8 +373,8 @@ main .btn_like {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   background-color: $light-background-color; 
-   padding: 1% 5%;
+   text-overflow: ellipsis;
+   background-color: $light-background-color;
 }
 
 .menu h3 {
@@ -393,16 +393,31 @@ main .btn_like {
   }
   
   .infos{
+      display: flex;
       margin-top: 20px;
+      padding: 10px 0 10px 0;
       background-color: #fff;
       border-radius:20px;
-      -webkit-border-radius:20px;
-      -moz-border-radius:20px;
-      -ms-border-radius:20px;
-      -o-border-radius:20px;
 }
-  .infos p{
-      padding: 10px 0 0 0;
+.description{
+    margin-left: 10px;
+}
+.starters, .main_course, .deserts {
+    padding: 10px 20px;
+}
+
+  .description h4{
+    padding-bottom: 5px; 
+  }
+  .description p{
+    /*overflow-wrap: break-word;*/
+    text-overflow: ellipsis;
+  }
+  .price {
+    margin: 2px 15px 0 0;
   }
 
+  .menu .explore-btn{
+      margin-bottom: 30px;
+  }
 
