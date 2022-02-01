@@ -55,22 +55,29 @@ $breakpoints-desktop: 1025px;
 }
 
 .loading {
+  display: flex;
+  width: 100%;
   height: 100%;
   background: white;
   position: fixed;
-  top: 40%;
+  /*top: 40%;
   left: 25%;
-  font-size: 50px;
+  */font-size: 50px;
   color: $color-primary;
   text-shadow: 6px 2px 4px $color-secondary;
   z-index: 20;
-  animation-name: loader;
-  animation: loader 5s linear;
+  animation-name: loading;
+  animation: loading 2s linear;
   animation-timing-function: ease;
+  visibility: hidden;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation: loading 2s linear;
 }
 
+
 .fa-pulse {
-  position: absolute;
+    margin: auto;
   color: $color-primary;
   text-shadow: 2px 2px 4px $color-secondary;
 }
@@ -78,10 +85,10 @@ $breakpoints-desktop: 1025px;
 @keyframes loading {
   0% {
     visibility: visible;
-    opacity: 0.9;
+    opacity: 1;
   }
   70% {
-    opacity: 0.9;
+    opacity: 1;
   }
   100% {
     visibility: hidden;
@@ -151,6 +158,10 @@ p {
   @media (min-width: $breakpoints-desktop) {
     font-size: 22px;
   }
+}
+
+a{
+    color: #000;
 }
 
 .location form {
@@ -287,9 +298,12 @@ input {
 .btn_like {
   font-size: 20px;
   position: absolute;
-  bottom: 20px;
+  top: 150px;
   right: 12px;
+  margin-left: auto;
+  padding: 20px;
 }
+
 .btn_like:hover .fas {
   transform: scale(1);
   transition: transform 0.4s;
@@ -299,6 +313,7 @@ input {
   position: absolute;
   color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   background-image: linear-gradient(0deg, $color-primary, $color-secondary);
   transform: scale(0);
   transition: transform 0.4s;
@@ -336,6 +351,10 @@ footer a {
 }
 
 /*menu_restaurant */
+.menu_restaurant h1{
+text-align: center;/*ne marche pas*/
+}
+
 .menu_restaurant i {
   font-size: 20px;
   position: absolute;
@@ -364,17 +383,14 @@ footer a {
   border-radius: 30px 30px 0 0;
 }
 
-main .btn_like {
-  position: absolute;
-  top: 270px;
-  right: 20px;
+.menu_title .btn_like{
+    margin-top: 100px;
 }
 
 .menu{
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   text-overflow: ellipsis;
    background-color: $light-background-color;
 }
 
@@ -393,18 +409,27 @@ main .btn_like {
     position: absolute;
   }
   
-  .infos{
-      display: flex;
-      margin-top: 20px;
-      padding: 10px 0 10px 0;
-      background-color: #fff;
-      border-radius:20px;
-      animation: menu-loader 1s both;
-      animation-delay: 2s;
-      @include shadow;
+  .infos {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px 0 10px 0;
+    background-color: #fff;
+    border-radius:20px;
+    opacity: 1;
+    overflow: hidden;
+    animation: menu-load 1s both;
+    animation-delay: 1s;
+    @include shadow;
 }
+
+@keyframes menu-load{
+0% {margin-top: 100px; opacity:0}
+100% {margin-top: 20px; opacity:1}
+}
+
 .description{
     margin-left: 10px;
+    width: 60%;
     /*display:flex;*/
 }
 .starters, .main_course, .deserts {
@@ -421,8 +446,13 @@ main .btn_like {
   }
   .price {
     margin: 2px 15px 0 0;
+    width: 20%;
   }
 
+  .check{
+      padding: 10px;
+      width: 20%;
+  }
   .menu .explore-btn{
       margin-bottom: 30px;
   }
