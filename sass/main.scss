@@ -360,6 +360,7 @@ footer a {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  margin-bottom: 0;
   border-radius: 30px 30px 0 0;
 }
 
@@ -398,9 +399,13 @@ main .btn_like {
       padding: 10px 0 10px 0;
       background-color: #fff;
       border-radius:20px;
+      animation: menu-loader 1s both;
+      animation-delay: 2s;
+      @include shadow;
 }
 .description{
     margin-left: 10px;
+    /*display:flex;*/
 }
 .starters, .main_course, .deserts {
     padding: 10px 20px;
@@ -410,8 +415,9 @@ main .btn_like {
     padding-bottom: 5px; 
   }
   .description p{
-    /*overflow-wrap: break-word;*/
-    text-overflow: ellipsis;
+    overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
   }
   .price {
     margin: 2px 15px 0 0;
