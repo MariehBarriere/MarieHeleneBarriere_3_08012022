@@ -132,7 +132,7 @@ h3 {
   font-weight: bolder;
   @media screen and (min-width: $breakpoints-tablet) {
     font-size: 25px;
-
+    text-align: center;
   }
   /*@media (min-width: $breakpoints-desktop) {
     font-size: 28px;*/
@@ -286,15 +286,16 @@ input {
 
 .restaurants_list {
   padding: 0 20px 20px 20px;
-  /*@media screen and (min-width: $breakpoints-tablet) {
+  @media screen and (min-width: $breakpoints-tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
+    margin: 0 35px 0 35px;
   }
   @media (min-width: $breakpoints-desktop) {
     height: 300px;
-  }*/
+  }
 }
 
 .restaurant_card {
@@ -306,9 +307,7 @@ input {
   transition: 0.4s;
   border-radius: 15px;
   @media screen and (min-width: $breakpoints-tablet) {
-      display: flex;
-      justify-content: space-between;
-    margin-top: 50px;
+      width: 45%;
   }
 }
 
@@ -325,23 +324,11 @@ input {
   right: 12px;
   padding: 4px;
 }
-.card_link{
-@media screen and (min-width: $breakpoints-tablet) {
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-}
-}
+
 .restaurants img {
   height: 160px;
   width: 100%;
   object-fit: cover;
-   /*h@media screen and (min-width: $breakpoints-tablet) 
-   eight: 50%;
-  }
-  @media (min-width: $breakpoints-desktop) {
-    height: 300px;*/
-  
 }
 
 .btn_like {
@@ -375,6 +362,11 @@ flex-wrap: wrap;
 footer {
   background-color: #000;
   padding: 20px 8%;
+
+  @media screen and (min-width: $breakpoints-tablet) {
+text-align: center;
+
+}
 }
 
 footer h4 {
@@ -393,10 +385,20 @@ footer i {
   margin-right: 15px;
   font-size: 9px;
   color: #fff;
+
+  @media screen and (min-width: $breakpoints-tablet) {
+    font-size: large;
+    
+    }
 }
 footer a {
   font-size: 14px;
   color: #fff;
+
+  @media screen and (min-width: $breakpoints-tablet) {
+    font-size: large;
+    
+    }
 }
 
 /*menu_restaurant */
