@@ -406,6 +406,9 @@ footer a {
   position: absolute;
   top: 25px;
   left: 20px;
+  @media screen and (min-width: $breakpoints-tablet) {
+    font-size: x-large;
+    }
 }
 
 .restaurant {
@@ -418,6 +421,9 @@ footer a {
     background-size: 100%;
     padding-top: 200px;
   }
+  @media screen and (min-width: $breakpoints-desktop) {
+    padding-top: 400px;  
+}
 }
 
 @keyframes menu-load {
@@ -437,22 +443,30 @@ footer a {
 .menu_title h2 {
   font-family: Shrikhand;
   background-color: $light-background-color;
-  display: flex;
-  justify-content: space-between;
   padding: 20px;
   margin-bottom: 0;
   border-radius: 30px 30px 0 0;
+  @media screen and (min-width: $breakpoints-tablet) {
+    display: flex;
+    justify-content: center;
+
+  background-color: #FFF;
+    }
 }
 
 .menu_title .btn_like {
   margin-top: 100px;
+  @media screen and (min-width: $breakpoints-tablet) {
+    margin-top: 28%;
+    margin-right: 10%;
+    font-size: x-large;
 }
-
+}
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $light-background-color;
+    
 }
 
 .menu h3 {
@@ -460,6 +474,7 @@ footer a {
   margin: 15px 0 0 0;
   padding: 0 0 5px 0;
   font-weight: 100;
+ 
 }
 
 .menu h3::after {
@@ -469,13 +484,20 @@ footer a {
   width: 50px;
   margin-top: 5px;
   position: absolute;
+  @media screen and (min-width: $breakpoints-tablet) {
+    width: 8%;
+    margin-left: 0;
+    }
 }
 .starters,
 .main_course,
 .deserts {
   padding: 10px 20px;
+  @media screen and (min-width: $breakpoints-tablet) { 
+margin: 0 15% 0 15%;
+padding:2%;
 }
-
+}
 .infos {
   display: flex;
   align-items: center;
@@ -488,6 +510,10 @@ footer a {
   animation-delay: 2s;
   background: #fff;
   @include shadow;
+  @media screen and (min-width: $breakpoints-tablet) {
+    padding: 50px 0 50px 20px;
+    box-shadow: 0 15px 15px $dark-background-color;
+    }
 }
 
 .description {
@@ -528,12 +554,18 @@ footer a {
   margin-right: -60px;
   border-radius: 0 15px 15px 0;
   transition: all 0.5s;
+  @media screen and (min-width: $breakpoints-tablet) {
+      height: 150px;
+  }
 }
 
 .check i {
   color: #ffffff;
   font-size: x-large;
   margin-top: 28px;
+  @media screen and (min-width: $breakpoints-tablet) {
+    margin-top: 60px;
+}
 }
 .infos:hover .check {
   margin: 0;
@@ -546,5 +578,9 @@ footer a {
 
 .menu .explore-btn {
   margin-bottom: 30px;
+  @media screen and (min-width: $breakpoints-tablet) {
+  padding: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
-
+}
