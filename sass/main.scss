@@ -38,7 +38,7 @@ $dark-background-color: hsl(0, 1%, 75%);
 $light-background-color: #f6f6f6;
 $font-family: "Roboto", sans-serif;
 $font-color: black;
-$breakpoints-tablet: 768px;
+$breakpoints-tablet: 600px;
 $breakpoints-desktop: 1025px;
 
 @mixin center {
@@ -60,9 +60,7 @@ $breakpoints-desktop: 1025px;
   height: 100%;
   background: white;
   position: fixed;
-  /*top: 40%;
-  left: 25%;
-  */font-size: 50px;
+  font-size: 50px;
   color: $color-primary;
   text-shadow: 6px 2px 4px $color-secondary;
   z-index: 20;
@@ -75,9 +73,8 @@ $breakpoints-desktop: 1025px;
   -webkit-animation: loading 2s linear;
 }
 
-
 .fa-pulse {
-    margin: auto;
+  margin: auto;
   color: $color-primary;
   text-shadow: 2px 2px 4px $color-secondary;
 }
@@ -134,17 +131,17 @@ h3 {
     font-size: 25px;
     text-align: center;
   }
-  /*@media (min-width: $breakpoints-desktop) {
-    font-size: 28px;*/
+  @media (min-width: $breakpoints-desktop) {
+    font-size: 28px;
   }
-
+}
 
 h4 {
   font-size: 17px;
   font-weight: bolder;
   margin: 0;
   @media (min-width: $breakpoints-tablet) {
-    font-size: 23px;
+    font-size: 20px;
   }
   @media (min-width: $breakpoints-desktop) {
     font-size: 26px;
@@ -156,15 +153,15 @@ p {
   font-weight: lighter;
   margin: 0;
   @media (min-width: $breakpoints-tablet) {
-    font-size: 21px;
+    font-size: 19px;
   }
   @media (min-width: $breakpoints-desktop) {
     font-size: 24px;
   }
 }
 
-a{
-    color: #000;
+a {
+  color: #000;
 }
 
 .location form {
@@ -176,11 +173,11 @@ a{
   i {
     padding: 0 15px 0;
     @media (min-width: $breakpoints-tablet) {
-        font-size:x-large;
-      }
-      @media (min-width: $breakpoints-desktop) {
-        font-size: xx-large;
-      }
+      font-size: x-large;
+    }
+    @media (min-width: $breakpoints-desktop) {
+      font-size: xx-large;
+    }
   }
 }
 
@@ -190,7 +187,7 @@ input {
   border-color: transparent;
   background-color: $background-color;
   @media (min-width: $breakpoints-tablet) {
-    font-size:x-large;
+    font-size: x-large;
   }
   @media (min-width: $breakpoints-desktop) {
     font-size: xx-large;
@@ -218,8 +215,7 @@ input {
   @include shadow;
   background: linear-gradient(340deg, $color-primary, $color-secondary);
   @media (min-width: $breakpoints-tablet) {
-    font-size:x-large;
-    margin: 2% 30% 0;
+    font-size: x-large;
   }
   @media (min-width: $breakpoints-desktop) {
     font-size: xx-large;
@@ -236,7 +232,7 @@ input {
   flex-direction: column;
   padding: 0 5%;
   @media (min-width: $breakpoints-tablet) {
-    font-size:x-large;
+    font-size: x-large;
     padding: 0 10%;
   }
   @media (min-width: $breakpoints-desktop) {
@@ -307,7 +303,7 @@ input {
   transition: 0.4s;
   border-radius: 15px;
   @media screen and (min-width: $breakpoints-tablet) {
-      width: 45%;
+    width: 45%;
   }
 }
 
@@ -364,11 +360,12 @@ footer {
   padding: 20px 8%;
 
   @media screen and (min-width: $breakpoints-tablet) {
-text-align: center;
-
+    text-align: center;
+  }
+  @media screen and (min-width: $breakpoints-desktop) {
+    padding: 20px;
+  }
 }
-}
-
 footer h4 {
   font-family: "Shrikhand";
   color: #fff;
@@ -388,8 +385,7 @@ footer i {
 
   @media screen and (min-width: $breakpoints-tablet) {
     font-size: large;
-    
-    }
+  }
 }
 footer a {
   font-size: 14px;
@@ -397,13 +393,12 @@ footer a {
 
   @media screen and (min-width: $breakpoints-tablet) {
     font-size: large;
-    
-    }
+  }
 }
 
 /*menu_restaurant */
-.menu_restaurant h1{
-text-align: center;/*ne marche pas*/
+.menu_restaurant h1 {
+  text-align: center;
 }
 
 .menu_restaurant i {
@@ -419,14 +414,23 @@ text-align: center;/*ne marche pas*/
   background-size: auto 40%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  @media screen and (min-width: $breakpoints-tablet) {
+    background-size: 100%;
+    padding-top: 200px;
+  }
 }
 
-@keyframes menu-load{
-    0% {margin-top: 100px; opacity:0}
-    100% {margin-top: 20px; opacity:1}
+@keyframes menu-load {
+  0% {
+    margin-top: 100px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 1;
+  }
+}
 
-    }
-    
 .menu_title {
   padding-top: 100px;
 }
@@ -440,69 +444,67 @@ text-align: center;/*ne marche pas*/
   border-radius: 30px 30px 0 0;
 }
 
-.menu_title .btn_like{
-    margin-top: 100px;
+.menu_title .btn_like {
+  margin-top: 100px;
 }
 
-.menu{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   background-color: $light-background-color;
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $light-background-color;
 }
 
 .menu h3 {
-    width: 35px;
-    margin: 15px 0 0 0;
-    padding: 0 0 5px 0;
-    font-weight:100;
-  }
+  width: 35px;
+  margin: 15px 0 0 0;
+  padding: 0 0 5px 0;
+  font-weight: 100;
+}
 
-  .menu h3::after {
-    content: "";
-    color: $color-tertiary;
-    border-bottom: 3px solid;
-   width: 50px;
-    margin-top: 5px;
-    position: absolute;
-  }
-  .starters, .main_course, .deserts{
-padding: 10px 20px;
-  }
+.menu h3::after {
+  content: "";
+  color: $color-tertiary;
+  border-bottom: 3px solid;
+  width: 50px;
+  margin-top: 5px;
+  position: absolute;
+}
+.starters,
+.main_course,
+.deserts {
+  padding: 10px 20px;
+}
 
-  .infos {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-   
+.infos {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+
   height: 70px;
   border-radius: 16px;
   overflow: hidden;
   animation: menu-load 1s both;
   animation-delay: 2s;
-  background: #FFF;
-@include shadow;
+  background: #fff;
+  @include shadow;
 }
 
-.description{
-    overflow: hidden;
+.description {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/*.starters, .main_course, .deserts {
-    padding: 10px 20px;
-}*/
-
-  .description h4{
-margin: 0;
+.description h4 {
+  margin: 0;
   padding: 6px 6px 6px 0;
   text-align: start;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  }
-  .description p{
-    margin: 0;
+}
+.description p {
+  margin: 0;
   padding: 6px 6px 6px 0;
   text-align: start;
   font-weight: 100;
@@ -510,41 +512,39 @@ margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  }
-  .price {
+}
+.price {
   margin: 32px 0 0 auto;
   padding-right: 15px;
-    font-weight:bolder;
-    
-  }
-
-  .check{
-    background-color: #99e2d0;
-    height: 80px;
-    width: 60px; 
-display: flex;
-  justify-content: center;
-    margin-right: -60px;
-    border-radius: 0 15px 15px 0;
-    transition: all 0.5s;
+  font-weight: bolder;
 }
 
-.check i{
-    color: #ffffff;
+.check {
+  background-color: #99e2d0;
+  height: 80px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  margin-right: -60px;
+  border-radius: 0 15px 15px 0;
+  transition: all 0.5s;
+}
+
+.check i {
+  color: #ffffff;
   font-size: x-large;
   margin-top: 28px;
 }
-.infos:hover .check{
-    margin: 0;
-  }
+.infos:hover .check {
+  margin: 0;
+}
 
-.infos:hover .check i{
-    transform: rotate(360deg);
+.infos:hover .check i {
+  transform: rotate(360deg);
   transition-duration: 0.6s;
 }
 
-  .menu .explore-btn{
-      margin-bottom: 30px;
-  }
+.menu .explore-btn {
+  margin-bottom: 30px;
+}
 
-  
