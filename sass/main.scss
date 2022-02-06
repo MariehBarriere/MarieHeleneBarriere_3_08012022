@@ -102,7 +102,7 @@ h1 {
     font-size: 30px;
   }
   @media (min-width: $breakpoints-desktop) {
-    font-size: 35px;
+    font-size: 50px;
   }
 }
 
@@ -216,7 +216,11 @@ input {
   background: linear-gradient(340deg, $color-primary, $color-secondary);
   @media (min-width: $breakpoints-tablet) {
     font-size: x-large;
-  }
+        padding: 20px;
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+  
   @media (min-width: $breakpoints-desktop) {
     font-size: xx-large;
   }
@@ -578,9 +582,5 @@ padding:2%;
 
 .menu .explore-btn {
   margin-bottom: 30px;
-  @media screen and (min-width: $breakpoints-tablet) {
-  padding: 20px;
-  margin-left: 30%;
-  margin-right: 30%;
-}
+ 
 }
