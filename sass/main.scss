@@ -208,10 +208,11 @@ input {
   justify-content: center;
   color: #fff;
   padding: 20px 0 20px 0;
-  margin: 25px 55px 0 55px;
+  margin: 25px 55px 25px 55px;
   cursor: pointer;
   border-radius: 200px;
   border-style: none;
+  background-color: $light-background-color;
   @include shadow;
   background: linear-gradient(340deg, $color-primary, $color-secondary);
   @media (min-width: $breakpoints-tablet) {
@@ -219,7 +220,6 @@ input {
         padding: 20px;
         margin: 5% 25% 5% 25%;
       }
-  
   @media (min-width: $breakpoints-desktop) {
     font-size: xx-large;
   }
@@ -414,7 +414,7 @@ footer a {
     }
 }
 
-.menu1 .restaurant {
+.restaurant1 {
   padding-top: 80px;
   background-image: url("../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: auto 40%;
@@ -429,10 +429,10 @@ footer a {
 }
 }
 
-.menu2 .restaurant {
+.restaurant2 {
     padding-top: 80px;
     background-image: url("../assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-    background-size: auto 40%;
+    background-size: auto 80%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     @media screen and (min-width: $breakpoints-tablet) {
@@ -443,7 +443,7 @@ footer a {
       padding-top: 400px;  
   }
   }
-  .menu3 .restaurant {
+  .restaurant3 {
     padding-top: 80px;
     background-image: url("../assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     background-size: auto 40%;
@@ -458,7 +458,7 @@ footer a {
   }
   }
 
-  .menu4 .restaurant {
+.restaurant4 {
     padding-top: 80px;
     background-image: url("../assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-size: auto 40%;
@@ -540,25 +540,25 @@ footer a {
 .main_course,
 .deserts {
   padding: 10px 20px;
+  background-color: $light-background-color;
   @media screen and (min-width: $breakpoints-tablet) { 
 margin: 0;
 padding:2% 20% 2% 20%;
-background-color: $light-background-color;
 }
 }
 .infos {
   display: flex;
   align-items: center;
   padding-left: 15px;
-
   height: 70px;
   border-radius: 16px;
   overflow: hidden;
-  animation: menu-load 1s both;
+  animation: menu-load .5s both;
   animation-delay: 2s;
   background: #fff;
   @include shadow;
-  @media screen and (min-width: $breakpoints-tablet) {
+  @media screen and(min-width: $breakpoints-tablet) 
+{
     padding: 50px 0 50px 20px;
     box-shadow: 0 15px 15px $dark-background-color;
     }
