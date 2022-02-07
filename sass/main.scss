@@ -217,8 +217,7 @@ input {
   @media (min-width: $breakpoints-tablet) {
     font-size: x-large;
         padding: 20px;
-        margin-left: 25%;
-        margin-right: 25%;
+        margin: 5% 25% 5% 25%;
       }
   
   @media (min-width: $breakpoints-desktop) {
@@ -498,8 +497,7 @@ footer a {
   @media screen and (min-width: $breakpoints-tablet) {
     display: flex;
     justify-content: center;
-
-  background-color: #FFF;
+  background-color: $light-background-color;
     }
 }
 
@@ -543,8 +541,9 @@ footer a {
 .deserts {
   padding: 10px 20px;
   @media screen and (min-width: $breakpoints-tablet) { 
-margin: 0 15% 0 15%;
-padding:2%;
+margin: 0;
+padding:2% 20% 2% 20%;
+background-color: $light-background-color;
 }
 }
 .infos {
@@ -625,7 +624,7 @@ padding:2%;
   transition-duration: 0.6s;
 }
 
-.menu .explore-btn {
+/*.menu .explore-btn {
   margin-bottom: 30px;
  
-}
+}*/
