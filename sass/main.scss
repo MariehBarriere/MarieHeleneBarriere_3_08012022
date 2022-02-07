@@ -256,6 +256,10 @@ input {
   background-color: $color-primary;
   border-radius: 50%;
   color: #f6f6f6;
+  @media (min-width: $breakpoints-desktop){
+ margin-left: -80px;
+    padding: 6px 15px;
+  }
 }
 
 .how_to i {
@@ -273,11 +277,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
     margin: 0 35px 0 35px;
-  }
-  @media (min-width: $breakpoints-desktop) {
-    height: 300px;
   }
 }
 
@@ -596,9 +596,6 @@ padding:2% 20% 2% 20%;
   color: #ffffff;
   font-size: x-large;
   margin: auto;
-  @media screen and (min-width: $breakpoints-tablet) {
-    margin-top: 60px;
-}
 }
 .infos:hover .check {
   margin: 0;
