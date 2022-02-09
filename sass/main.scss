@@ -1,10 +1,8 @@
-html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  color: #000;
   flex-wrap: wrap;
 }
 
@@ -21,7 +19,6 @@ $background-color: hsl(0, 1%, 91%);
 $dark-background-color: hsl(0, 1%, 75%);
 $light-background-color: #f6f6f6;
 $font-family: "Roboto", sans-serif;
-$font-color: black;
 $breakpoints-tablet: 600px;
 $breakpoints-desktop: 1025px;
 
@@ -95,7 +92,6 @@ h1 {
   @include center;
   font-family: Shrikhand;
   font-size: 26px;
-  color: $font-color;
   @media (min-width: $breakpoints-tablet) {
     font-size: 30px;
   }
@@ -106,7 +102,6 @@ h1 {
 
 h2 {
   font-size: 24px;
-  color: $font-color;
   font-weight: bolder;
   text-align: center;
   margin-top: 0;
@@ -123,7 +118,6 @@ h3 {
   font-size: 21px;
   margin-left: 25px;
   padding-top: 25px;
-  color: $font-color;
   font-weight: bolder;
   @media screen and (min-width: $breakpoints-tablet) {
     font-size: 25px;
@@ -159,7 +153,7 @@ p {
 }
 
 a {
-  color: #000;
+  color: black;
 }
 
 .menu {
@@ -184,7 +178,6 @@ a {
 }
 
 input {
-  font: $font-color;
   font-size: 15px;
   border-color: transparent;
   background-color: $background-color;
@@ -254,7 +247,6 @@ input {
   padding: 25px 0 25px 25px;
   margin: 0 0 25px 10px;
   background-color: $light-background-color;
-  font: color #000;
   @include shadow;
   &:hover {
     box-shadow: 9px 10px 9px $dark-background-color;
@@ -361,7 +353,7 @@ input {
 }
 
 footer {
-  background-color: #000;
+  background-color: black;
   padding: 20px 8%;
 
   @media screen and (min-width: $breakpoints-tablet) {
